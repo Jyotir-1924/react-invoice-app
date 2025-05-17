@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography, Stack, Button, Box } from "@mui/material";
 import { useRouter } from "next/router";
-import {useTheme} from "@mui/material";
+import { useTheme } from "@mui/material";
 
 export default function Navbar() {
   const router = useRouter();
@@ -11,13 +11,15 @@ export default function Navbar() {
 
   return (
     <AppBar
-      position="absolute"
+      position="fixed"
       elevation={0}
       sx={{
-        bgcolor: "transparent",
+        background: "linear-gradient(to right,rgb(236, 253, 255),rgb(255, 244, 235))",
         color: "#333",
         px: 3,
         py: 2,
+        zIndex: (theme) => theme.zIndex.drawer + 1,
+        borderBottom: "1px solid #ddd",
       }}
     >
       <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
@@ -27,7 +29,8 @@ export default function Navbar() {
           sx={{
             fontWeight: "bold",
             fontFamily: theme.typography.fontFamily.Josefin,
-            background: "linear-gradient(to right,rgb(220, 151, 255),rgb(255, 97, 163))",
+            background:
+              "linear-gradient(to right,rgb(220, 151, 255),rgb(255, 97, 163))",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             cursor: "pointer",

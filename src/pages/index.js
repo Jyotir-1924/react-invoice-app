@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "@/Containers/Home";
-import Navbar from "@/components/Navbar"; // Adjust if path is different
+import Navbar from "@/components/Navbar";
 
 function Home() {
   return (

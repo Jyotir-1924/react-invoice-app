@@ -1,32 +1,32 @@
 import { AppBar, Toolbar, Typography, Stack, Button, Box } from "@mui/material";
 import { useRouter } from "next/router";
+import {useTheme} from "@mui/material";
 
 export default function Navbar() {
   const router = useRouter();
-
+  const theme = useTheme();
   const handleNavigate = (path) => {
     router.push(path);
   };
 
   return (
     <AppBar
-      position="static"
+      position="absolute"
       elevation={0}
       sx={{
-        bgcolor: "#ffffff",
+        bgcolor: "transparent",
         color: "#333",
         px: 3,
-        py: 1,
-        borderBottom: "1px solid #ddd",
+        py: 2,
       }}
     >
       <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
         {/* Logo to be added */}
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{
             fontWeight: "bold",
-            fontFamily: "'Segoe UI', sans-serif",
+            fontFamily: theme.typography.fontFamily.Josefin,
             background: "linear-gradient(to right,rgb(220, 151, 255),rgb(255, 97, 163))",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -38,17 +38,19 @@ export default function Navbar() {
           Invoice AI
         </Typography>
 
-        {/* Navigation Links */}
         <Stack direction="row" spacing={3}>
           <Button
             variant="text"
             sx={{
               color: "#333",
               fontWeight: 500,
+              transition: "transform 0.4s ease",
               "&:hover": {
                 color: "#1976d2",
                 backgroundColor: "transparent",
+                transform: "scale(1.09)",
               },
+              fontFamily: theme.typography.fontFamily.Josefin,
             }}
             onClick={() => handleNavigate("/contact")}
           >
@@ -60,10 +62,13 @@ export default function Navbar() {
             sx={{
               color: "#333",
               fontWeight: 500,
+              transition: "transform 0.4s ease",
               "&:hover": {
                 color: "#1976d2",
                 backgroundColor: "transparent",
+                transform: "scale(1.09)",
               },
+              fontFamily: theme.typography.fontFamily.Josefin,
             }}
             onClick={() => handleNavigate("/about")}
           >
@@ -75,10 +80,13 @@ export default function Navbar() {
             sx={{
               color: "#333",
               fontWeight: 500,
+              transition: "transform 0.4s ease",
               "&:hover": {
                 color: "#1976d2",
                 backgroundColor: "transparent",
+                transform: "scale(1.09)",
               },
+              fontFamily: theme.typography.fontFamily.Josefin,
             }}
             onClick={() => handleNavigate("/custom-invoice")}
           >

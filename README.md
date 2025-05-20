@@ -17,7 +17,7 @@ A clean and professional invoice generator built with Next.js, React, and Materi
 
 ## Demo
 
-Add your live demo link here (if deployed)
+- to be added soon !
 
 ---
 

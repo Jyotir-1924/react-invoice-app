@@ -1,6 +1,11 @@
-import { AppBar, Toolbar, Typography, Stack, Button, Box } from "@mui/material";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+
 import { useRouter } from "next/router";
-import { useTheme } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function Navbar() {
   const router = useRouter();
